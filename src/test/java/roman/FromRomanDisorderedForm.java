@@ -10,7 +10,7 @@ public class FromRomanDisorderedForm {
 
     @BeforeEach
     public void setUp() {
-        converter = new RomanConverterImpl();
+        converter = TestImplValue.getImplValue();
     }
 
     @ParameterizedTest

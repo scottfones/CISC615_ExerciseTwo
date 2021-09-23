@@ -9,7 +9,7 @@ public class FromRomanEmpty {
 
     @BeforeEach
     public void setUp() {
-        converter = new RomanConverterImpl();
+        converter = TestImplValue.getImplValue();
     }
 
     @Test

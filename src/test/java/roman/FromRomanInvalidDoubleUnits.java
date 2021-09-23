@@ -14,7 +14,7 @@ public class FromRomanInvalidDoubleUnits {
 
     @BeforeEach
     public void setUp() {
-        converter = new RomanConverterImpl();
+        converter = TestImplValue.getImplValue();
     }
 
     @Test

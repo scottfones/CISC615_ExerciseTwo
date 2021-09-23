@@ -18,7 +18,7 @@ public class ToRomanValidCombinations {
 
     @BeforeEach
     public void setUp() {
-        converter = new RomanConverterImpl();
+        converter = TestImplValue.getImplValue();
     }
 
     @Test
