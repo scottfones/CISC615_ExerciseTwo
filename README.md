@@ -42,3 +42,34 @@ The remaining code constructs a value from input. To test this we need valid Rom
 
 To test `fromRoman()`, we need to create test suites for valid and invalid input. The invalid input test suite only requires one test, comprised of an anti-pattern to `romanNumeralPattern`. The valid input test suite requires combinations of valid Roman Numerals that cover the symbols in `RomanSymbol`.
 
+## Test Results
+
+### Interface Tests
+
+| CLASS                            | INSTRUCTION_MISSED | INSTRUCTION_COVERED | BRANCH_MISSED | BRANCH_COVERED | LINE_MISSED | LINE_COVERED | METHOD_MISSED | METHOD_COVERED |
+|----------------------------------|--------------------|---------------------|---------------|----------------|-------------|--------------|---------------|----------------|
+| RomanConverterImplB.RomanNumeral | 0                  | 119                 | 0             | 0              | 0           | 8            | 0             | 5              |
+| RomanConverterImplB              | 57                 | 47                  | 11            | 7              | 15          | 13           | 1             | 2              |
+| RomanConverterImplA              | 21                 | 212                 | 8             | 16             | 9           | 27           | 0             | 4              |
+| RomanConverterImpl               | 10                 | 126                 | 1             | 13             | 2           | 22           | 0             | 4              |
+| RomanConverterImpl.RomanSymbol   | 0                  | 105                 | 0             | 0              | 0           | 18           | 0             | 3              |
+
+### Functionality Tests
+
+| CLASS                            | INSTRUCTION_MISSED | INSTRUCTION_COVERED | BRANCH_MISSED | BRANCH_COVERED | LINE_MISSED | LINE_COVERED | METHOD_MISSED | METHOD_COVERED |
+|----------------------------------|--------------------|---------------------|---------------|----------------|-------------|--------------|---------------|----------------|
+| RomanConverterImplB.RomanNumeral | 0                  | 119                 | 0             | 0              | 0           | 8            | 0             | 5              |
+| RomanConverterImplB              | 12                 | 92                  | 5             | 13             | 2           | 26           | 0             | 3              |
+| RomanConverterImplA              | 2                  | 231                 | 1             | 23             | 1           | 35           | 0             | 4              |
+| RomanConverterImpl               | 0                  | 136                 | 0             | 14             | 0           | 24           | 0             | 4              |
+| RomanConverterImpl.RomanSymbol   | 0                  | 105                 | 0             | 0              | 0           | 18           | 0             | 3              |
+
+### Coverage Tests
+
+| CLASS                            | INSTRUCTION_MISSED | INSTRUCTION_COVERED | BRANCH_MISSED | BRANCH_COVERED | LINE_MISSED | LINE_COVERED | METHOD_MISSED | METHOD_COVERED |
+|----------------------------------|--------------------|---------------------|---------------|----------------|-------------|--------------|---------------|----------------|
+| RomanConverterImplB.RomanNumeral | 0                  | 119                 | 0             | 0              | 0           | 8            | 0             | 5              |
+| RomanConverterImplB              | 12                 | 92                  | 5             | 13             | 2           | 26           | 0             | 3              |
+| RomanConverterImplA              | 2                  | 231                 | 1             | 23             | 1           | 35           | 0             | 4              |
+| RomanConverterImpl               | 0                  | 136                 | 0             | 14             | 0           | 24           | 0             | 4              |
+| RomanConverterImpl.RomanSymbol   | 0                  | 105                 | 0             | 0              | 0           | 18           | 0             | 3              |
