@@ -30,7 +30,6 @@ public class FromRomanInvalid {
     @Test
     public void testFromRomanEmpty() {
         assertEquals(0, converter.fromRoman(""));
-        //assertThrows(IllegalArgumentException.class, () -> converter.fromRoman(""));
     }
 
     @Test
