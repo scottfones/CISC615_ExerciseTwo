@@ -14,7 +14,7 @@ public class ToRomanInvalid {
     }
 
    @ParameterizedTest
-    @ValueSource(ints = { Integer.MIN_VALUE, -1, 0, Integer.MAX_VALUE })
+    @ValueSource(ints = { 0, 4000 })
     public void testToRomanInvalid(int intVal) {
         assertThrows(IllegalArgumentException.class, () -> converter.toRoman(intVal));
     }
