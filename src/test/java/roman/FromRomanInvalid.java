@@ -8,15 +8,21 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FromRomanInvalid {
     private RomanConverter converter;
+    private RomanConverter converterA;
+    private RomanConverter converterB;
 
     @BeforeEach
     public void setUp() {
-        converter = TestImplValue.getImplValue();
+        converter = new RomanConverterImpl();
+        converterA = new RomanConverterImplA();
+        converterB = new RomanConverterImplB();
     }
 
     @ParameterizedTest
     @ValueSource(strings = { "IIIIIV", "VX", "LC", "DM", "VL", "XD", "IM" })
     public void testFromRomanInvalidForm(String invNumeral) {
         assertThrows(IllegalArgumentException.class, () -> converter.fromRoman(invNumeral));
+        assertThrows(IllegalArgumentException.class, () -> converterA.fromRoman(invNumeral));
+        assertThrows(IllegalArgumentException.class, () -> converterB.fromRoman(invNumeral));
     }
 }

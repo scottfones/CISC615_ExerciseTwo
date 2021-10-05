@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ToRomanValid {
     private RomanConverter converter;
+    private RomanConverter converterA;
+    private RomanConverter converterB;
 
     static String[] numeralOnes = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
     static String[] numeralTens = { "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
@@ -18,7 +20,9 @@ public class ToRomanValid {
 
     @BeforeEach
     public void setUp() {
-        converter = TestImplValue.getImplValue();
+        converter = new RomanConverterImpl();
+        converterA = new RomanConverterImplA();
+        converterB = new RomanConverterImplB();
     }
 
     @Test
@@ -32,6 +36,8 @@ public class ToRomanValid {
                                 + numeralOnes[ones];
 
                         assertEquals(strVal, converter.toRoman(intVal));
+                        assertEquals(strVal, converterA.toRoman(intVal));
+                        assertEquals(strVal, converterB.toRoman(intVal));
                     }
                 }
             }

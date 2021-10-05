@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FromRomanValid {
     private RomanConverter converter;
+    private RomanConverter converterA;
+    private RomanConverter converterB;
 
     static String[] numeralOnes = { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
     static String[] numeralTens = { "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
@@ -18,7 +20,9 @@ public class FromRomanValid {
 
     @BeforeEach
     public void setUp() {
-        converter = TestImplValue.getImplValue();
+        converter = new RomanConverterImpl();
+        converterA = new RomanConverterImplA();
+        converterB = new RomanConverterImplB();
     }
 
     @Test
@@ -31,6 +35,8 @@ public class FromRomanValid {
                 strVal = thous;
 
                 assertEquals(intVal, converter.fromRoman(strVal));
+                assertEquals(intVal, converterA.fromRoman(strVal));
+                assertEquals(intVal, converterB.fromRoman(strVal));
                 intVal += 100;
             }
 
@@ -39,6 +45,8 @@ public class FromRomanValid {
                     strVal = thous + hunds;
 
                     assertEquals(intVal, converter.fromRoman(strVal));
+                    assertEquals(intVal, converterA.fromRoman(strVal));
+                    assertEquals(intVal, converterB.fromRoman(strVal));
                     intVal += 10;
                 }
 
@@ -47,6 +55,8 @@ public class FromRomanValid {
                         strVal = thous + hunds + tens;
 
                         assertEquals(intVal, converter.fromRoman(strVal));
+                        assertEquals(intVal, converterA.fromRoman(strVal));
+                        assertEquals(intVal, converterB.fromRoman(strVal));
                         intVal += 1;
                     }
 
@@ -54,6 +64,8 @@ public class FromRomanValid {
                         strVal = thous + hunds + tens + ones;
 
                         assertEquals(intVal, converter.fromRoman(strVal));
+                        assertEquals(intVal, converterA.fromRoman(strVal));
+                        assertEquals(intVal, converterB.fromRoman(strVal));
                         intVal += 1;
                     }
                 }
