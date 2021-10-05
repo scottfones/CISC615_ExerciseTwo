@@ -1,7 +1,13 @@
-package roman;
+package roman_coverage;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+
+import roman.RomanConverter;
+import roman.RomanConverterImpl;
+import roman.RomanConverterImplA;
+import roman.RomanConverterImplB;
+
 import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
